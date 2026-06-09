@@ -654,6 +654,69 @@
     line-height: 1.6;
   }
 
+  /* ─── Experience ─── */
+  #experience { background: var(--bg); }
+
+  .exp-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.35rem;
+  }
+  .exp-role {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.35rem;
+    line-height: 1.2;
+  }
+  .exp-period {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .exp-company {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+  .exp-intro {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.65;
+    margin-bottom: 1.1rem;
+  }
+  .exp-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+  .exp-bullets li {
+    position: relative;
+    padding-left: 1.4rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+  .exp-bullets li::before {
+    content: '▸';
+    position: absolute;
+    left: 0; top: 0;
+    color: var(--accent);
+    font-size: 0.8rem;
+  }
+  .exp-bullets strong { color: var(--text); font-weight: 500; }
+  .exp-metric {
+    color: var(--accent);
+    font-family: 'DM Mono', monospace;
+    font-weight: 500;
+  }
+
   /* ─── Contact ─── */
   #contact { background: var(--bg); }
 
@@ -824,6 +887,7 @@
   <a href="#hero" class="nav-logo">SN.</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Work</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -933,9 +997,74 @@
   </div>
 </section>
 
+<!-- Experience -->
+<section id="experience">
+  <div class="section-label" data-num="02">Experience</div>
+  <h2 class="section-title reveal">Where I've <em>worked</em></h2>
+
+  <div class="edu-timeline reveal">
+    <div class="edu-item">
+      <div class="exp-head">
+        <div class="exp-role">Operational Analyst</div>
+        <div class="exp-period">Aug 2022 — Sep 2024</div>
+      </div>
+      <div class="exp-company">The Sweet Room Pty Ltd · Sydney, Australia</div>
+      <p class="exp-intro">
+        Owned the data and analytics function for a fast-paced hospitality business —
+        turning raw point-of-sale data into forecasting models and dashboards that
+        directly shaped staffing, inventory, and management decisions.
+      </p>
+      <ul class="exp-bullets">
+        <li>
+          Engineered a near real-time data pipeline against the POS <strong>REST API</strong> — handling
+          data cleaning (deduplication, null handling) and applying <strong>time-series demand
+          forecasting</strong> to optimise staff scheduling across peak and off-peak periods, cutting
+          monthly labour costs by <span class="exp-metric">12%</span>.
+        </li>
+        <li>
+          Built an <strong>inventory consumption model</strong> correlating raw ingredient usage against
+          daily sales volume to surface waste patterns and automate replenishment decisions —
+          reducing material loss by <span class="exp-metric">15%</span>.
+        </li>
+        <li>
+          Wrote <strong>SQL</strong> (joins, aggregations, CTEs) to transform raw POS data into structured
+          reporting tables, and built a multi-metric <strong>Power BI dashboard</strong> (DAX, Power Query)
+          tracking revenue, foot traffic, and top SKUs — enabling consistent weekly and monthly
+          reporting for management.
+        </li>
+      </ul>
+    </div>
+
+    <div class="edu-item">
+      <div class="exp-head">
+        <div class="exp-role">Data Analyst</div>
+        <div class="exp-period">Aug 2019 — Jul 2022</div>
+      </div>
+      <div class="exp-company">Beauty Charms Pty Ltd · Sydney, Australia</div>
+      <p class="exp-intro">
+        Built the retail analytics backbone for an e-commerce and retail business —
+        automating reporting, forecasting inventory, and analysing demand to drive
+        revenue and reduce waste.
+      </p>
+      <ul class="exp-bullets">
+        <li>
+          Engineered an automated <strong>ETL pipeline</strong> (Excel Power Query) to process
+          <strong>500+ monthly transactions</strong>, replacing manual data entry and saving
+          <span class="exp-metric">10 hrs/week</span>.
+        </li>
+        <li>
+          Built an <strong>inventory forecasting model</strong> and conducted demand-pattern analysis
+          to surface top-performing SKUs — lifting average order value by <span class="exp-metric">15%</span>
+          and cutting dead stock by <span class="exp-metric">20%</span>.
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <!-- Projects -->
 <section id="projects">
-  <div class="section-label" data-num="02">Work</div>
+  <div class="section-label" data-num="03">Work</div>
   <h2 class="section-title reveal">Selected <em>projects</em></h2>
 
   <div class="projects-grid reveal">
@@ -1179,27 +1308,29 @@
 
 <!-- Education -->
 <section id="education">
-  <div class="section-label" data-num="03">Education</div>
+  <div class="section-label" data-num="04">Education</div>
   <h2 class="section-title reveal">Academic <em>background</em></h2>
 
   <div class="edu-timeline reveal">
     <div class="edu-item">
-      <div class="edu-year">Postgraduate</div>
+      <div class="edu-year">2024 — Expected Dec 2026</div>
       <div class="edu-degree">Master of Information Technology — Data Analytics</div>
       <div class="edu-school">University of Technology Sydney (UTS) · Sydney, Australia</div>
       <div class="edu-note">
-        Advanced study in machine learning, data analytics, and AI systems —
+        GPA 6.75 / 7.0 (High Distinction) · Excellence Academic Scholarship.
+        Coursework in Machine Learning, Data Mining, Statistical Analysis, and Database Systems —
         building the technical foundation for data science and quantitative work.
       </div>
     </div>
 
     <div class="edu-item">
-      <div class="edu-year">Undergraduate</div>
+      <div class="edu-year">Graduated 2023</div>
       <div class="edu-degree">Bachelor of Business — Finance &amp; Economics</div>
       <div class="edu-school">University of Technology Sydney (UTS) · Sydney, Australia</div>
       <div class="edu-note">
-        Grounding in finance and economics — markets, valuation, risk, and
-        economic analysis — the domain lens I bring to every data and modelling problem.
+        Excellence Academic Scholarship. Grounding in finance and economics — markets,
+        valuation, risk, and economic analysis — the domain lens I bring to every data
+        and modelling problem.
       </div>
     </div>
   </div>
@@ -1207,7 +1338,7 @@
 
 <!-- Contact -->
 <section id="contact">
-  <div class="section-label" data-num="04">Contact</div>
+  <div class="section-label" data-num="05">Contact</div>
   <h2 class="section-title reveal">Let's <em>connect</em></h2>
 
   <div class="contact-inner">
@@ -1222,7 +1353,7 @@
       <div class="contact-links">
         <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=vulime@gmail.com" target="_blank" rel="noopener" class="contact-link">
           <span class="contact-link-icon">✉</span>
-          <span class="contact-link-text"><span class="__cf_email__" data-cfemail="3e484b5257535b7e59535f5752105d5153">[email&#160;protected]</span></span>
+          <span class="contact-link-text"><span class="__cf_email__" data-cfemail="cabcbfa6a3a7af8aada7aba3a6e4a9a5a7">[email&#160;protected]</span></span>
           <span class="contact-link-label">Email</span>
         </a>
         <a href="https://github.com/vubeoangel" target="_blank" class="contact-link">
