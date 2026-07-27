@@ -587,6 +587,53 @@
 
   .featured-metric .metric-label { text-align: left; }
 
+  /* ─── Project categories ─── */
+  .proj-jumpnav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 3.5rem;
+  }
+  .proj-jumpnav a {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 0.5rem 1.1rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    transition: all 0.2s;
+  }
+  .proj-jumpnav a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-dim);
+  }
+  .proj-category { margin-bottom: 4rem; scroll-margin-top: 6rem; }
+  .proj-category:last-of-type { margin-bottom: 0; }
+  .proj-category-head {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .proj-category-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.5rem;
+  }
+  .proj-category-title em { font-style: italic; color: var(--accent); }
+  .proj-category-count {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+  }
+
   /* ─── Education ─── */
   #education { background: var(--bg2); }
 
@@ -1191,303 +1238,326 @@
   <div class="section-label" data-num="03">Work</div>
   <h2 class="section-title reveal">Selected <em>projects</em></h2>
 
-  <div class="projects-grid reveal">
+  <nav class="proj-jumpnav reveal">
+    <a href="#cat-analyst">Data Analyst / BI</a>
+    <a href="#cat-ds">Data Science / ML</a>
+    <a href="#cat-ai">AI / LLM Engineering</a>
+    <a href="#cat-de">Data Engineering</a>
+    <a href="#cat-quant">Quantitative Finance</a>
+  </nav>
 
-    <!-- Applied Portfolio Manager -->
-    <div class="project-card">
-      <div class="project-card-inner">
-        <div class="project-type">Quant · Finance</div>
-        <h3 class="project-title">Applied Portfolio Manager</h3>
-        <p class="project-desc">
-          End-to-end quantitative research pipeline: built a vectorized backtesting engine for
-          cross-sectional momentum strategies across multiple assets; constructed long/short
-          market-neutral portfolios from ranked signals; evaluated signal quality via Information
-          Coefficient (IC) using rank correlation; modelled full backtest with transaction costs
-          and performance metrics (Sharpe ratio, drawdown, turnover); extended to ML-based alpha
-          factor generation using scikit-learn.
-        </p>
-        <div class="project-metrics">
-          <div class="metric">
-            <span class="metric-val">Backtest</span>
-            <span class="metric-label">Vectorized engine</span>
-          </div>
-          <div class="metric">
-            <span class="metric-val">Alpha</span>
-            <span class="metric-label">IC + ML signals</span>
-          </div>
-        </div>
-        <div class="project-tags">
-          <span class="tag">Python</span>
-          <span class="tag">pandas</span>
-          <span class="tag">NumPy</span>
-          <span class="tag">scikit-learn</span>
-          <span class="tag">Matplotlib</span>
-        </div>
-        <a href="https://github.com/vubeoangel/applied-portfolio-manager" target="_blank" rel="noopener" class="project-link">
-          View on GitHub →
-        </a>
-      </div>
+  <div class="proj-category reveal" id="cat-analyst">
+    <div class="proj-category-head">
+      <h3 class="proj-category-title">Data Analyst / <em>BI</em></h3>
+      <span class="proj-category-count">2 projects</span>
     </div>
+    <div class="projects-grid">
 
-    <!-- Featured: Cost-Sensitive Credit Classification -->
-    <div class="project-card featured">
-      <div class="project-card-inner">
-        <div class="project-type">Featured Project · ML Research</div>
-        <h3 class="project-title">Cost-Sensitive Credit Card Default Classification</h3>
-        <p class="project-desc">
-          Trained 7 classifiers; tuned best (LightGBM) to ROC-AUC 0.994. Derived a cost-optimal
-          decision threshold from Federal Reserve and ECB data, cutting misclassification cost by
-          71% vs. the standard 0.50 threshold. Embedded the 7.56:1 FN/FP asymmetry directly into
-          LightGBM's gradient computation, reducing cost by a further 13% at the naive threshold
-          without any threshold tuning. Deployed as an interactive web app for real-time credit
-          risk scoring (cost-lab, model arena, single-applicant inference).
-        </p>
-        <div class="project-tags">
-          <span class="tag">Python 3.11</span>
-          <span class="tag">LightGBM</span>
-          <span class="tag">XGBoost</span>
-          <span class="tag">scikit-learn</span>
-          <span class="tag">imbalanced-learn</span>
-          <span class="tag">SMOTE</span>
-          <span class="tag">Custom Loss Functions</span>
-          <span class="tag">Streamlit</span>
+      <div class="project-card">
+        <div class="project-card-inner">
+          <div class="project-type">Data Analytics · BI</div>
+          <h3 class="project-title">Bank Loan Analysis</h3>
+          <p class="project-desc">
+            Interactive dashboard analysing a bank's loan portfolio: applications, funded amounts,
+            repayments, and good vs. bad loan segmentation across regions, terms, and borrower profiles.
+          </p>
+          <div class="project-metrics">
+            <div class="metric">
+              <span class="metric-val">Dashboard</span>
+              <span class="metric-label">Interactive BI</span>
+            </div>
+            <div class="metric">
+              <span class="metric-val">KPI</span>
+              <span class="metric-label">Portfolio health</span>
+            </div>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Power BI</span>
+            <span class="tag">DAX</span>
+            <span class="tag">SQL</span>
+          </div>
+          <a href="https://github.com/vubeoangel/Bank-Loan-Analysis-using-PowerBI" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
         </div>
-        <a href="https://credit-risk-app-uts.streamlit.app" target="_blank" rel="noopener" class="project-link">
-          Live demo ↗
-        </a>
-        <a href="https://github.com/vubeoangel/cost-sensitive-credit-classification" target="_blank" rel="noopener" class="project-link">
-          View on GitHub →
-        </a>
       </div>
-      <div class="project-card-inner">
-        <div class="featured-metrics">
-          <div class="featured-metric">
-            <span class="metric-val">0.994</span>
-            <span class="metric-label">ROC-AUC (LightGBM)</span>
+
+      <div class="project-card">
+        <div class="project-card-inner">
+          <div class="project-type">Data Analytics · Public Policy</div>
+          <h3 class="project-title">Australian International Trade - Visual Analytics (1988-2024)</h3>
+          <p class="project-desc">
+            End-to-end visual analytics study of Australia's international trade across 10 SITC
+            categories and 67 subcategories (1988-2024). Engineered a 3-layer Excel model (raw,
+            statistics, analytics); built a Tableau interactive dashboard and narrative storyboard
+            for a public policy audience. Applied ETS (Exponential Smoothing) forecasting and
+            benchmarked AI-assisted trend interpretation (GPT-5) against self-derived findings.
+          </p>
+          <div class="project-metrics">
+            <div class="metric">
+              <span class="metric-val">36 yrs</span>
+              <span class="metric-label">1988-2024 coverage</span>
+            </div>
+            <div class="metric">
+              <span class="metric-val">10 / 67</span>
+              <span class="metric-label">Categories / subcategories</span>
+            </div>
           </div>
-          <div class="featured-metric">
-            <span class="metric-val">-71%</span>
-            <span class="metric-label">Cost vs. baseline threshold</span>
+          <div class="project-tags">
+            <span class="tag">Tableau</span>
+            <span class="tag">Excel</span>
+            <span class="tag">ABS Data</span>
+            <span class="tag">ETS Forecasting</span>
           </div>
-          <div class="featured-metric">
-            <span class="metric-val">-13%</span>
-            <span class="metric-label">Cost from custom objective alone</span>
-          </div>
-          <div class="featured-metric">
-            <span class="metric-val">7</span>
-            <span class="metric-label">Classifiers benchmarked</span>
-          </div>
+          <a href="https://github.com/vubeoangel/Australian-International-Trades" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
         </div>
-        <p style="font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--text-muted);margin-top:1.5rem;line-height:1.6;">
-          Key insight: embedding economic cost asymmetry structurally into the boosting algorithm, not just at the decision threshold, produces a cost-aware model by construction, reducing expected cost even at the naive t = 0.50 boundary.
-        </p>
       </div>
+
     </div>
-
-    <!-- Financial LLM Research -->
-    <div class="project-card">
-      <div class="project-card-inner">
-        <div class="project-type">Research · LLMs</div>
-        <h3 class="project-title">Financial LLM Research</h3>
-        <p class="project-desc">
-          Benchmarked 11 model-strategy combinations (VADER, FinBERT, Llama 3.1 8B, Qwen 3 235B,
-          GPT-OSS 120B × zero-shot / few-shot / CoT) on financial sentiment classification.
-          Key finding: 5 of 9 LLM configs beat FinBERT with zero fine-tuning, showing prompt design beats scale.
-        </p>
-        <div class="project-metrics">
-          <div class="metric">
-            <span class="metric-val">99%</span>
-            <span class="metric-label">Best accuracy</span>
-          </div>
-          <div class="metric">
-            <span class="metric-val">0.992</span>
-            <span class="metric-label">Best F1 score</span>
-          </div>
-        </div>
-        <div class="project-tags">
-          <span class="tag">Python</span>
-          <span class="tag">LLMs</span>
-          <span class="tag">NLP</span>
-          <span class="tag">Prompt Engineering</span>
-        </div>
-        <a href="https://github.com/vubeoangel/Financial_LLM_research" target="_blank" rel="noopener" class="project-link">
-          View on GitHub →
-        </a>
-      </div>
-    </div>
-
-    <!-- Trustworthy RAG -->
-    <div class="project-card">
-      <div class="project-card-inner">
-        <div class="project-type">Collaboration · AI Systems</div>
-        <h3 class="project-title">Trustworthy RAG - AU</h3>
-        <p class="project-desc">
-          A calibrated 3-state RAG system (<strong>confident / hedged / refused</strong>) over Australian
-          financial regulatory documents: hybrid retrieval (BM25 + dense + RRF), heuristic confidence
-          routing, an NLI-based faithfulness check, and structured JSON output with citations.
-        </p>
-        <div class="project-metrics">
-          <div class="metric">
-            <span class="metric-val">3-state</span>
-            <span class="metric-label">Calibrated output</span>
-          </div>
-          <div class="metric">
-            <span class="metric-val">Hybrid</span>
-            <span class="metric-label">BM25 + dense + RRF</span>
-          </div>
-        </div>
-        <div class="project-tags">
-          <span class="tag">Python</span>
-          <span class="tag">RAG</span>
-          <span class="tag">NLI</span>
-          <span class="tag">LangChain</span>
-        </div>
-        <a href="https://github.com/vubeoangel/trustworthy-rag-au" target="_blank" rel="noopener" class="project-link">
-          View on GitHub →
-        </a>
-      </div>
-    </div>
-
-    <!-- Medallion Architecture Pipeline -->
-    <div class="project-card">
-      <div class="project-card-inner">
-        <div class="project-type">Data Engineering · Lakehouse</div>
-        <h3 class="project-title">Medallion Architecture Data Pipeline</h3>
-        <p class="project-desc">
-          An end-to-end lakehouse on <strong>Azure Databricks</strong> implementing the full
-          Medallion Architecture: an ADF dynamic pipeline ingesting 9 tables into a <strong>Bronze</strong>
-          Delta layer, <strong>dbt Snapshots</strong> tracking SCD Type 2 history across the <strong>Silver</strong>
-          layer, and dbt models building a Star Schema <strong>Gold</strong> layer, secured with Unity Catalog
-          and Key Vault.
-        </p>
-        <div class="project-metrics">
-          <div class="metric">
-            <span class="metric-val">9 tables</span>
-            <span class="metric-label">Bronze to Gold</span>
-          </div>
-          <div class="metric">
-            <span class="metric-val">8/8 pass</span>
-            <span class="metric-label">Data quality tests</span>
-          </div>
-        </div>
-        <div class="project-tags">
-          <span class="tag">Azure Databricks</span>
-          <span class="tag">dbt</span>
-          <span class="tag">Delta Lake</span>
-          <span class="tag">Unity Catalog</span>
-          <span class="tag">ADF</span>
-          <span class="tag">SCD Type 2</span>
-        </div>
-        <a href="https://github.com/vubeoangel/medallion-dbt" target="_blank" rel="noopener" class="project-link">
-          View on GitHub →
-        </a>
-      </div>
-    </div>
-
-    <!-- Bank Loan Analysis -->
-    <div class="project-card">
-      <div class="project-card-inner">
-        <div class="project-type">Data Analytics · BI</div>
-        <h3 class="project-title">Bank Loan Analysis</h3>
-        <p class="project-desc">
-          An interactive Power BI dashboard analysing a bank's loan portfolio: tracking
-          applications, funded amounts, and repayments, and surfacing good vs. bad loans
-          across regions, terms, and borrower profiles.
-        </p>
-        <div class="project-metrics">
-          <div class="metric">
-            <span class="metric-val">Dashboard</span>
-            <span class="metric-label">Interactive BI</span>
-          </div>
-          <div class="metric">
-            <span class="metric-val">KPI</span>
-            <span class="metric-label">Portfolio health</span>
-          </div>
-        </div>
-        <div class="project-tags">
-          <span class="tag">Power BI</span>
-          <span class="tag">DAX</span>
-          <span class="tag">SQL</span>
-          <span class="tag">Data Viz</span>
-        </div>
-        <a href="https://github.com/vubeoangel/Bank-Loan-Analysis-using-PowerBI" target="_blank" rel="noopener" class="project-link">
-          View on GitHub →
-        </a>
-      </div>
-    </div>
-
-    <!-- NYC Payroll Pipeline -->
-    <div class="project-card">
-      <div class="project-card-inner">
-        <div class="project-type">Data Engineering · Cloud</div>
-        <h3 class="project-title">NYC Payroll Data Pipeline</h3>
-        <p class="project-desc">
-          An end-to-end cloud data engineering pipeline on <strong>Microsoft Azure</strong>: ingesting
-          5 raw CSV sources into a Data Lake, orchestrating ETL through Data Factory data flows,
-          warehousing in Azure SQL, and querying aggregated results in Synapse via external
-          (CETAS) tables.
-        </p>
-        <div class="project-metrics">
-          <div class="metric">
-            <span class="metric-val">5 sources</span>
-            <span class="metric-label">Multi-source ETL</span>
-          </div>
-          <div class="metric">
-            <span class="metric-val">6 flows</span>
-            <span class="metric-label">ADF data flows</span>
-          </div>
-        </div>
-        <div class="project-tags">
-          <span class="tag">Azure Data Factory</span>
-          <span class="tag">Data Lake Gen2</span>
-          <span class="tag">Azure SQL</span>
-          <span class="tag">Synapse Analytics</span>
-          <span class="tag">Parquet</span>
-          <span class="tag">SQL</span>
-        </div>
-        <a href="https://github.com/vubeoangel/nycpayroll" target="_blank" rel="noopener" class="project-link">
-          View on GitHub →
-        </a>
-      </div>
-    </div>
-
-    <!-- Australian International Trade -->
-    <div class="project-card">
-      <div class="project-card-inner">
-        <div class="project-type">Data Analytics · Public Policy</div>
-        <h3 class="project-title">Australian International Trade - Visual Analytics (1988-2024)</h3>
-        <p class="project-desc">
-          End-to-end visual analytics study of Australia's international trade across 10 SITC
-          categories and 67 subcategories (1988-2024). Engineered a 3-layer Excel model (raw,
-          statistics, analytics); built a Tableau interactive dashboard and narrative storyboard
-          for a public policy audience. Applied ETS (Exponential Smoothing) forecasting and
-          benchmarked AI-assisted trend interpretation (GPT-5) against self-derived findings.
-        </p>
-        <div class="project-metrics">
-          <div class="metric">
-            <span class="metric-val">36 yrs</span>
-            <span class="metric-label">1988-2024 coverage</span>
-          </div>
-          <div class="metric">
-            <span class="metric-val">10 / 67</span>
-            <span class="metric-label">Categories / subcategories</span>
-          </div>
-        </div>
-        <div class="project-tags">
-          <span class="tag">Tableau</span>
-          <span class="tag">Excel</span>
-          <span class="tag">ABS Data</span>
-          <span class="tag">ETS Forecasting</span>
-        </div>
-        <a href="https://github.com/vubeoangel/Australian-International-Trades" target="_blank" rel="noopener" class="project-link">
-          View on GitHub →
-        </a>
-      </div>
-    </div>
-
   </div>
 
-  <div class="reveal" style="margin-top:2rem;text-align:center;">
+  <div class="proj-category reveal" id="cat-ds">
+    <div class="proj-category-head">
+      <h3 class="proj-category-title">Data Science / <em>Machine Learning</em></h3>
+      <span class="proj-category-count">1 project</span>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card featured">
+        <div class="project-card-inner">
+          <div class="project-type">Featured Project · ML Research</div>
+          <h3 class="project-title">Cost-Sensitive Credit Card Default Classification</h3>
+          <p class="project-desc">
+            Trained 7 classifiers; tuned best (LightGBM) to ROC-AUC 0.994. Derived a cost-optimal
+            decision threshold from Federal Reserve and ECB data, cutting misclassification cost by
+            71% vs. the standard 0.50 threshold. Embedded the 7.56:1 FN/FP asymmetry directly into
+            LightGBM's gradient computation, reducing cost by a further 13% at the naive threshold
+            without any threshold tuning. Deployed as an interactive web app for real-time credit
+            risk scoring (cost-lab, model arena, single-applicant inference).
+          </p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">LightGBM</span>
+            <span class="tag">XGBoost</span>
+            <span class="tag">scikit-learn</span>
+            <span class="tag">imbalanced-learn</span>
+            <span class="tag">Custom Loss Functions</span>
+          </div>
+          <a href="https://credit-risk-app-uts.streamlit.app" target="_blank" rel="noopener" class="project-link">Live demo ↗</a>
+          <a href="https://github.com/vubeoangel/cost-sensitive-credit-classification" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+        </div>
+        <div class="project-card-inner">
+          <div class="featured-metrics">
+            <div class="featured-metric">
+              <span class="metric-val">0.994</span>
+              <span class="metric-label">ROC-AUC (LightGBM)</span>
+            </div>
+            <div class="featured-metric">
+              <span class="metric-val">-71%</span>
+              <span class="metric-label">Cost vs. baseline threshold</span>
+            </div>
+            <div class="featured-metric">
+              <span class="metric-val">-13%</span>
+              <span class="metric-label">Cost from custom objective alone</span>
+            </div>
+            <div class="featured-metric">
+              <span class="metric-val">7</span>
+              <span class="metric-label">Classifiers benchmarked</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="proj-category reveal" id="cat-ai">
+    <div class="proj-category-head">
+      <h3 class="proj-category-title">AI / <em>LLM Engineering</em></h3>
+      <span class="proj-category-count">2 projects</span>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-card-inner">
+          <div class="project-type">Research · LLMs</div>
+          <h3 class="project-title">Financial LLM Research</h3>
+          <p class="project-desc">
+            Benchmarked 11 model-strategy combinations (VADER, FinBERT, Llama 3.1 8B, Qwen 3 235B,
+            GPT-OSS 120B, across zero-shot/few-shot/CoT) on financial sentiment classification.
+            Best: GPT-OSS 120B zero-shot at 99% accuracy, F1 0.992. Key finding: 5 of 9 LLM
+            configurations outperform FinBERT with zero fine-tuning; prompt design beats scale.
+          </p>
+          <div class="project-metrics">
+            <div class="metric">
+              <span class="metric-val">99%</span>
+              <span class="metric-label">Best accuracy</span>
+            </div>
+            <div class="metric">
+              <span class="metric-val">0.992</span>
+              <span class="metric-label">Best F1 score</span>
+            </div>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">LLMs</span>
+            <span class="tag">NLP</span>
+            <span class="tag">Prompt Engineering</span>
+          </div>
+          <a href="https://github.com/vubeoangel/Financial_LLM_research" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-inner">
+          <div class="project-type">Collaboration · AI Systems</div>
+          <h3 class="project-title">Trustworthy RAG for Australian Financial Regulation</h3>
+          <p class="project-desc">
+            Built a calibrated 3-state RAG system (confident / hedged / refused) over AU financial
+            regulatory documents. Hybrid retrieval (BM25 + dense + RRF), heuristic confidence
+            routing, NLI-based faithfulness check, structured JSON output with citations. Compared
+            against 4 baseline variants to isolate the effect of each trust mechanism.
+          </p>
+          <div class="project-metrics">
+            <div class="metric">
+              <span class="metric-val">3-state</span>
+              <span class="metric-label">Calibrated output</span>
+            </div>
+            <div class="metric">
+              <span class="metric-val">4</span>
+              <span class="metric-label">Baseline comparisons</span>
+            </div>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">RAG</span>
+            <span class="tag">BM25 + Dense + RRF</span>
+            <span class="tag">NLI</span>
+            <span class="tag">LangChain</span>
+          </div>
+          <a href="https://github.com/vubeoangel/trustworthy-rag-au" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="proj-category reveal" id="cat-de">
+    <div class="proj-category-head">
+      <h3 class="proj-category-title">Data <em>Engineering</em></h3>
+      <span class="proj-category-count">2 projects</span>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-card-inner">
+          <div class="project-type">Data Engineering · Lakehouse</div>
+          <h3 class="project-title">Medallion Architecture Data Pipeline</h3>
+          <p class="project-desc">
+            End-to-end lakehouse pipeline implementing full Medallion Architecture: ADF dynamic
+            pipeline ingesting 9 tables into Bronze Delta layer; dbt Snapshots tracking SCD Type 2
+            history across 7 Silver tables; dbt models building Star Schema Gold layer. Unity
+            Catalog with managed identity storage credentials; Azure Key Vault for secrets
+            management. 8 data quality tests pass.
+          </p>
+          <div class="project-metrics">
+            <div class="metric">
+              <span class="metric-val">9 tables</span>
+              <span class="metric-label">Bronze to Gold</span>
+            </div>
+            <div class="metric">
+              <span class="metric-val">8/8 pass</span>
+              <span class="metric-label">Data quality tests</span>
+            </div>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Azure Databricks</span>
+            <span class="tag">dbt</span>
+            <span class="tag">Delta Lake</span>
+            <span class="tag">Unity Catalog</span>
+            <span class="tag">ADF</span>
+          </div>
+          <a href="https://github.com/vubeoangel/medallion-dbt" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-inner">
+          <div class="project-type">Data Engineering · Cloud</div>
+          <h3 class="project-title">NYC Payroll Data Pipeline</h3>
+          <p class="project-desc">
+            End-to-end cloud data engineering pipeline on NYC payroll data: 6 parallel ADF
+            dataflows ingesting 5 CSV sources into ADLS Gen2, transforming into Azure SQL
+            dimensional schema, and exposing aggregated budget/overtime analytics via Synapse
+            Analytics CETAS external tables with Parquet columnar staging. Deployed with Managed
+            Identity authentication and an ARM template for reproducible infrastructure.
+          </p>
+          <div class="project-metrics">
+            <div class="metric">
+              <span class="metric-val">5 sources</span>
+              <span class="metric-label">Multi-source ETL</span>
+            </div>
+            <div class="metric">
+              <span class="metric-val">6 flows</span>
+              <span class="metric-label">ADF dataflows</span>
+            </div>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Azure Data Factory</span>
+            <span class="tag">ADLS Gen2</span>
+            <span class="tag">Azure SQL</span>
+            <span class="tag">Synapse Analytics</span>
+            <span class="tag">Parquet</span>
+          </div>
+          <a href="https://github.com/vubeoangel/nycpayroll" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="proj-category reveal" id="cat-quant">
+    <div class="proj-category-head">
+      <h3 class="proj-category-title">Quantitative <em>Finance</em></h3>
+      <span class="proj-category-count">1 project</span>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-card-inner">
+          <div class="project-type">Quant · Finance</div>
+          <h3 class="project-title">Applied Portfolio Manager</h3>
+          <p class="project-desc">
+            End-to-end quantitative research pipeline: built a vectorized backtesting engine for
+            cross-sectional momentum strategies across multiple assets; constructed long/short
+            market-neutral portfolios from ranked signals; evaluated signal quality via Information
+            Coefficient (IC) using rank correlation; modelled full backtest with transaction costs
+            and performance metrics (Sharpe ratio, drawdown, turnover); extended to ML-based alpha
+            factor generation using scikit-learn.
+          </p>
+          <div class="project-metrics">
+            <div class="metric">
+              <span class="metric-val">Backtest</span>
+              <span class="metric-label">Vectorized engine</span>
+            </div>
+            <div class="metric">
+              <span class="metric-val">Alpha</span>
+              <span class="metric-label">IC + ML signals</span>
+            </div>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">pandas</span>
+            <span class="tag">NumPy</span>
+            <span class="tag">scikit-learn</span>
+            <span class="tag">Matplotlib</span>
+          </div>
+          <a href="https://github.com/vubeoangel/applied-portfolio-manager" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="reveal" style="margin-top:3rem;text-align:center;">
     <a href="https://github.com/vubeoangel?tab=repositories" target="_blank" rel="noopener" class="btn btn-outline">View all repositories on GitHub ↗</a>
   </div>
 </section>
