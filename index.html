@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sebastian Nguyen — Data Analyst · Data Scientist · Quant</title>
+<title>Sebastian Nguyen - Data Analyst · Data Scientist · Quant</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
 <style>
@@ -654,6 +654,48 @@
     line-height: 1.6;
   }
 
+  .edu-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--bg);
+    background: var(--accent3);
+    padding: 0.3rem 0.75rem;
+    border-radius: 2px;
+    font-weight: 500;
+    margin: 0.75rem 0 1rem;
+  }
+
+  .edu-cert-embed {
+    margin-top: 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--bg);
+  }
+  .edu-cert-embed iframe {
+    display: block;
+    width: 100%;
+    height: 480px;
+    border: none;
+  }
+  .edu-cert-download {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-dim);
+  }
+  .edu-cert-download:hover { border-color: var(--accent); }
+
   /* ─── Experience ─── */
   #experience { background: var(--bg); }
 
@@ -715,6 +757,28 @@
     color: var(--accent);
     font-family: 'DM Mono', monospace;
     font-weight: 500;
+  }
+  .exp-highlight {
+    background: var(--accent-dim);
+    border: 1px solid rgba(124,255,212,0.3);
+    border-radius: 4px;
+    padding: 0.85rem 1rem 0.85rem 2.2rem !important;
+    margin-top: 0.2rem;
+  }
+  .exp-highlight::before { top: 0.95rem; }
+  .exp-highlight-badge {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--bg);
+    background: var(--accent);
+    padding: 0.15rem 0.5rem;
+    border-radius: 2px;
+    margin-right: 0.6rem;
+    font-weight: 500;
+    vertical-align: 2px;
   }
 
   /* ─── Contact ─── */
@@ -905,9 +969,11 @@
     <h1 class="hero-name fade-in delay-1">Sebastian<br><em>Nguyen.</em></h1>
     <div class="hero-role fade-in delay-2">Data Analyst · Data Scientist · Quant</div>
     <p class="hero-desc fade-in delay-3">
-      I turn data into <strong>decisions</strong> — combining a finance background with
-      machine learning to build models, analytics, and tools that drive measurable outcomes.
-      Master of IT (Data Analytics) and Bachelor of Business (Finance &amp; Economics).
+      Data professional bridging finance and machine learning: building models, analytics pipelines, and
+      deployed applications that drive measurable business outcomes. Currently completing a
+      <strong>Master of IT (Data Analytics)</strong> at UTS (WAM 87.45, High Distinction) alongside hands-on work
+      in cost-sensitive ML, financial LLMs, and trustworthy RAG systems. Particularly focused on problems in
+      <strong>FinTech, risk analytics, and applied AI</strong> where rigorous modelling translates directly into value.
     </p>
     <div class="hero-cta fade-in delay-4">
       <a href="#projects" class="btn btn-primary">View my work →</a>
@@ -930,7 +996,7 @@
     <div class="about-text reveal">
       <h2 class="section-title">Where <em>finance</em> meets data &amp; machine learning</h2>
       <div class="highlight">
-        "Good analysis turns data into a decision — and a good model
+        "Good analysis turns data into a decision, and a good model
         makes that decision better, faster, and at scale."
       </div>
       <p>
@@ -940,7 +1006,7 @@
         raw data and real business and market decisions.
       </p>
       <p>
-        My work spans the full pipeline — exploring and cleaning data, building statistical and
+        My work spans the full pipeline: exploring and cleaning data, building statistical and
         machine learning models, and shipping them into apps and dashboards people can actually use.
         I'm especially drawn to problems in <strong>finance and risk</strong>, where rigorous analysis
         and well-built models translate directly into measurable value.
@@ -955,6 +1021,14 @@
     <div class="skills-section reveal">
       <div class="skills-title">Tech Stack</div>
       <div class="skill-group">
+        <div class="skill-group-name">Languages</div>
+        <div class="skill-pills">
+          <span class="pill">Python 3.11</span>
+          <span class="pill">SQL</span>
+          <span class="pill">DAX</span>
+        </div>
+      </div>
+      <div class="skill-group">
         <div class="skill-group-name">Machine Learning</div>
         <div class="skill-pills">
           <span class="pill">LightGBM</span>
@@ -962,29 +1036,22 @@
           <span class="pill">scikit-learn</span>
           <span class="pill">imbalanced-learn</span>
           <span class="pill">SMOTE</span>
+          <span class="pill">Custom Loss Functions</span>
+          <span class="pill">Cost-Sensitive Learning</span>
+          <span class="pill">Threshold Optimisation</span>
         </div>
       </div>
       <div class="skill-group">
-        <div class="skill-group-name">Data & Analytics</div>
+        <div class="skill-group-name">Data Analysis & Viz</div>
         <div class="skill-pills">
-          <span class="pill">Python 3.11</span>
-          <span class="pill">SQL</span>
           <span class="pill">pandas</span>
           <span class="pill">NumPy</span>
-          <span class="pill">Power BI</span>
-          <span class="pill">DAX</span>
-          <span class="pill">Power Query</span>
+          <span class="pill">Jupyter</span>
           <span class="pill">Matplotlib</span>
           <span class="pill">Seaborn</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-name">AI / LLMs</div>
-        <div class="skill-pills">
-          <span class="pill">RAG Systems</span>
-          <span class="pill">Financial LLMs</span>
-          <span class="pill">Prompt Engineering</span>
-          <span class="pill">LangChain</span>
+          <span class="pill">Power BI</span>
+          <span class="pill">Power Query</span>
+          <span class="pill">Tableau</span>
         </div>
       </div>
       <div class="skill-group">
@@ -996,18 +1063,38 @@
           <span class="pill">Delta Lake</span>
           <span class="pill">Unity Catalog</span>
           <span class="pill">ADLS Gen2</span>
-          <span class="pill">Synapse</span>
+          <span class="pill">Azure Synapse Analytics</span>
           <span class="pill">Azure SQL</span>
+          <span class="pill">Azure Key Vault</span>
           <span class="pill">Medallion Architecture</span>
+          <span class="pill">Star Schema</span>
+          <span class="pill">SCD Type 2</span>
+          <span class="pill">CETAS</span>
+          <span class="pill">Parquet</span>
+          <span class="pill">Managed Identity</span>
+          <span class="pill">ARM Templates</span>
         </div>
       </div>
       <div class="skill-group">
-        <div class="skill-group-name">Engineering & Deployment</div>
+        <div class="skill-group-name">AI / LLMs</div>
+        <div class="skill-pills">
+          <span class="pill">Agentic Workflows</span>
+          <span class="pill">Claude Scheduled Agents</span>
+          <span class="pill">Tool Use</span>
+          <span class="pill">RAG Systems</span>
+          <span class="pill">Hybrid Retrieval (BM25 + Dense + RRF)</span>
+          <span class="pill">NLI Faithfulness Checks</span>
+          <span class="pill">Prompt Engineering</span>
+          <span class="pill">LangChain</span>
+          <span class="pill">FinBERT</span>
+          <span class="pill">Financial Sentiment Analysis</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-name">Deployment & Tools</div>
         <div class="skill-pills">
           <span class="pill">Streamlit</span>
-          <span class="pill">Flask</span>
           <span class="pill">Git / GitHub</span>
-          <span class="pill">ARM Templates</span>
         </div>
       </div>
     </div>
@@ -1023,65 +1110,46 @@
     <div class="edu-item">
       <div class="exp-head">
         <div class="exp-role">Data Analyst</div>
-        <div class="exp-period">Dec 2025 — Present</div>
-      </div>
-      <div class="exp-company">Jung Talents · Sydney, Australia</div>
-      <p class="exp-intro">
-        Building BI solutions and reporting infrastructure in a collaborative data team
-        environment — translating raw data into structured reporting layers and
-        stakeholder-ready dashboards.
-      </p>
-      <ul class="exp-bullets">
-        <li>
-          Delivered a <strong>3-page interactive Power BI dashboard</strong> (Summary, Overview,
-          Details) on <span class="exp-metric">38,576 loan records</span>, enabling MTD/MoM
-          trend analysis and drill-through filtering for stakeholder reporting.
-        </li>
-        <li>
-          Engineered a <strong>SQL</strong> data-preparation layer (CTEs, window functions, joins)
-          transforming raw loan data into structured reporting tables — reducing manual report
-          prep time by <span class="exp-metric">40%</span>.
-        </li>
-        <li>
-          Authored <strong>DAX</strong> measures for KPI calculation and documented full
-          source-to-report lineage and transformation logic — cutting team onboarding time
-          on the model by <span class="exp-metric">30%</span>.
-        </li>
-        <li>
-          Partnered with stakeholders to translate business questions into reporting
-          requirements, iterating dashboard design across <span class="exp-metric">5 feedback cycles</span>.
-        </li>
-      </ul>
-    </div>
-
-    <div class="edu-item">
-      <div class="exp-head">
-        <div class="exp-role">Operational Analyst</div>
-        <div class="exp-period">Aug 2022 — Aug 2025</div>
+        <div class="exp-period">Aug 2022 - Aug 2025</div>
       </div>
       <div class="exp-company">The Sweet Room Pty Ltd · Sydney, Australia · Part-time</div>
       <p class="exp-intro">
-        Sole person handling data &amp; reporting for a small Sydney dessert business, part-time
-        alongside university — turning raw point-of-sale data into forecasting models and
-        dashboards that directly shaped staffing, inventory, and management decisions.
+        Sole data analyst for a Sydney dessert business, part-time alongside university,
+        owning all reporting and analytics infrastructure end to end.
       </p>
       <ul class="exp-bullets">
         <li>
-          Engineered a near real-time data pipeline against the POS <strong>REST API</strong> — handling
-          data cleaning (deduplication, null handling) and applying <strong>time-series demand
-          forecasting</strong> to optimise staff scheduling across peak and off-peak periods, cutting
-          monthly labour costs by <span class="exp-metric">12%</span>.
+          Sole data analyst for 3 years, owning all reporting and analytics infrastructure;
+          delivered weekly sales reports to the owner covering time-of-day patterns and
+          top-selling products across <span class="exp-metric">100-200 daily transactions</span> and
+          ~20 SKUs, directly informing seasonal stock levels, opening hours, and staffing decisions.
         </li>
         <li>
-          Built an <strong>inventory consumption model</strong> correlating raw ingredient usage against
-          daily sales volume to surface waste patterns and automate replenishment decisions —
-          reducing material loss by <span class="exp-metric">15%</span>.
+          Transformed raw POS data into structured <strong>SQL</strong> reporting tables (joins,
+          aggregations, CTEs), replacing manual spreadsheet reporting with a repeatable weekly
+          reporting process.
         </li>
         <li>
-          Wrote <strong>SQL</strong> (joins, aggregations, CTEs) to transform raw POS data into structured
-          reporting tables, and built a multi-metric <strong>Power BI dashboard</strong> (DAX, Power Query)
-          tracking revenue, foot traffic, and top SKUs — enabling consistent weekly and monthly
-          reporting for management.
+          Built an <strong>inventory consumption model</strong> correlating raw ingredient usage
+          against daily sales volume to automate replenishment, reducing material loss by
+          <span class="exp-metric">15%</span>.
+        </li>
+        <li>
+          Engineered a near real-time data pipeline against the <strong>Square POS REST API</strong>
+          (deduplication, null handling, time-series demand forecasting) to optimise staff
+          scheduling, cutting monthly labour costs by <span class="exp-metric">12%</span>.
+        </li>
+        <li>
+          Built a multi-metric <strong>Power BI dashboard</strong> (DAX, Power Query) tracking
+          revenue, foot traffic, and top SKUs for management reporting.
+        </li>
+        <li class="exp-highlight">
+          <span class="exp-highlight-badge">AI Agent System</span>
+          Automated the full stock workflow with an AI agent system: Claude-scheduled jobs parse
+          daily supplier invoices from Gmail into a stock ledger and pull Square POS sales via API
+          for a real-time inventory position, with automated reorder reminders, cutting daily
+          stock reconciliation from ~30 minutes of manual checking to a
+          <span class="exp-metric">5-minute verification</span>.
         </li>
       </ul>
     </div>
@@ -1093,20 +1161,20 @@
       </div>
       <div class="exp-company">Quantium (via Forage) · Remote</div>
       <p class="exp-intro">
-        Completed Quantium's data analytics job simulation — an end-to-end retail analytics
+        Completed Quantium's data analytics job simulation, an end-to-end retail analytics
         engagement from raw transaction data through to a board-level strategic report.
       </p>
       <ul class="exp-bullets">
         <li>
           <strong>Customer segmentation:</strong> cleaned and feature-engineered
           <span class="exp-metric">264,834 chip transactions</span> (regex pack-size/brand extraction,
-          outlier removal) and analysed 21 segments — identifying Budget Older Families ($168K) and
+          outlier removal) and analysed 21 segments, identifying Budget Older Families ($168K) and
           Mainstream Young Singles/Couples ($158K) as top commercial opportunities.
         </li>
         <li>
           <strong>Trial-store uplift testing:</strong> built a control-store matching function
-          (Pearson correlation + normalised magnitude distance) and applied 95% CI band testing —
-          all 3 trial stores showed a significant <span class="exp-metric">12–26% sales uplift</span>.
+          (Pearson correlation + normalised magnitude distance) and applied 95% CI band testing,
+          with all 3 trial stores showing a significant <span class="exp-metric">12-26% sales uplift</span>.
         </li>
         <li>
           <strong>Strategic report:</strong> delivered a 14-slide deck to the Category Manager using
@@ -1125,16 +1193,54 @@
 
   <div class="projects-grid reveal">
 
-    <!-- Featured -->
+    <!-- Applied Portfolio Manager -->
+    <div class="project-card">
+      <div class="project-card-inner">
+        <div class="project-type">Quant · Finance</div>
+        <h3 class="project-title">Applied Portfolio Manager</h3>
+        <p class="project-desc">
+          End-to-end quantitative research pipeline: built a vectorized backtesting engine for
+          cross-sectional momentum strategies across multiple assets; constructed long/short
+          market-neutral portfolios from ranked signals; evaluated signal quality via Information
+          Coefficient (IC) using rank correlation; modelled full backtest with transaction costs
+          and performance metrics (Sharpe ratio, drawdown, turnover); extended to ML-based alpha
+          factor generation using scikit-learn.
+        </p>
+        <div class="project-metrics">
+          <div class="metric">
+            <span class="metric-val">Backtest</span>
+            <span class="metric-label">Vectorized engine</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val">Alpha</span>
+            <span class="metric-label">IC + ML signals</span>
+          </div>
+        </div>
+        <div class="project-tags">
+          <span class="tag">Python</span>
+          <span class="tag">pandas</span>
+          <span class="tag">NumPy</span>
+          <span class="tag">scikit-learn</span>
+          <span class="tag">Matplotlib</span>
+        </div>
+        <a href="https://github.com/vubeoangel/applied-portfolio-manager" target="_blank" rel="noopener" class="project-link">
+          View on GitHub →
+        </a>
+      </div>
+    </div>
+
+    <!-- Featured: Cost-Sensitive Credit Classification -->
     <div class="project-card featured">
       <div class="project-card-inner">
         <div class="project-type">Featured Project · ML Research</div>
         <h3 class="project-title">Cost-Sensitive Credit Card Default Classification</h3>
         <p class="project-desc">
-          A rigorous study in cost-sensitive learning for imbalanced binary classification.
-          Trained 7 classifiers and tuned the best (LightGBM) to ROC-AUC 0.994.
-          Used real Federal Reserve and ECB economic data to derive a cost-optimal decision threshold —
-          then went further by embedding the 7.56:1 FN/FP asymmetry directly into LightGBM's gradient computation.
+          Trained 7 classifiers; tuned best (LightGBM) to ROC-AUC 0.994. Derived a cost-optimal
+          decision threshold from Federal Reserve and ECB data, cutting misclassification cost by
+          71% vs. the standard 0.50 threshold. Embedded the 7.56:1 FN/FP asymmetry directly into
+          LightGBM's gradient computation, reducing cost by a further 13% at the naive threshold
+          without any threshold tuning. Deployed as an interactive web app for real-time credit
+          risk scoring (cost-lab, model arena, single-applicant inference).
         </p>
         <div class="project-tags">
           <span class="tag">Python 3.11</span>
@@ -1144,8 +1250,12 @@
           <span class="tag">imbalanced-learn</span>
           <span class="tag">SMOTE</span>
           <span class="tag">Custom Loss Functions</span>
+          <span class="tag">Streamlit</span>
         </div>
-        <a href="https://github.com/vubeoangel/cost-sensitive-credit-classification" target="_blank" class="project-link">
+        <a href="https://credit-risk-app-uts.streamlit.app" target="_blank" rel="noopener" class="project-link">
+          Live demo ↗
+        </a>
+        <a href="https://github.com/vubeoangel/cost-sensitive-credit-classification" target="_blank" rel="noopener" class="project-link">
           View on GitHub →
         </a>
       </div>
@@ -1156,11 +1266,11 @@
             <span class="metric-label">ROC-AUC (LightGBM)</span>
           </div>
           <div class="featured-metric">
-            <span class="metric-val">−71%</span>
+            <span class="metric-val">-71%</span>
             <span class="metric-label">Cost vs. baseline threshold</span>
           </div>
           <div class="featured-metric">
-            <span class="metric-val">−13%</span>
+            <span class="metric-val">-13%</span>
             <span class="metric-label">Cost from custom objective alone</span>
           </div>
           <div class="featured-metric">
@@ -1169,43 +1279,8 @@
           </div>
         </div>
         <p style="font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--text-muted);margin-top:1.5rem;line-height:1.6;">
-          Key insight: embedding economic cost asymmetry structurally into the boosting algorithm — not just at the decision threshold — produces a cost-aware model by construction, reducing expected cost even at the naive t = 0.50 boundary.
+          Key insight: embedding economic cost asymmetry structurally into the boosting algorithm, not just at the decision threshold, produces a cost-aware model by construction, reducing expected cost even at the naive t = 0.50 boundary.
         </p>
-      </div>
-    </div>
-
-    <!-- Credit Risk App -->
-    <div class="project-card">
-      <div class="project-card-inner">
-        <div class="project-type">Production App · FinTech</div>
-        <h3 class="project-title">Credit Risk Prediction App</h3>
-        <p class="project-desc">
-          A deployed, interactive web app for real-time credit risk scoring — featuring a
-          cost-lab, a model arena, and single-applicant inference. Built with Python and
-          Streamlit, wrapping the trained LightGBM model in a clean end-user interface.
-        </p>
-        <div class="project-metrics">
-          <div class="metric">
-            <span class="metric-val">Live</span>
-            <span class="metric-label">Deployed app</span>
-          </div>
-          <div class="metric">
-            <span class="metric-val">Real-time</span>
-            <span class="metric-label">Inference</span>
-          </div>
-        </div>
-        <div class="project-tags">
-          <span class="tag">Python</span>
-          <span class="tag">Streamlit</span>
-          <span class="tag">LightGBM</span>
-          <span class="tag">Deployment</span>
-        </div>
-        <a href="https://credit-risk-app-uts.streamlit.app" target="_blank" rel="noopener" class="project-link">
-          Live demo ↗
-        </a>
-        <a href="https://github.com/vubeoangel/credit-risk-app" target="_blank" rel="noopener" class="project-link">
-          View on GitHub →
-        </a>
       </div>
     </div>
 
@@ -1215,9 +1290,9 @@
         <div class="project-type">Research · LLMs</div>
         <h3 class="project-title">Financial LLM Research</h3>
         <p class="project-desc">
-          Benchmarked 11 model–strategy combinations (VADER, FinBERT, Llama 3.1 8B, Qwen 3 235B,
+          Benchmarked 11 model-strategy combinations (VADER, FinBERT, Llama 3.1 8B, Qwen 3 235B,
           GPT-OSS 120B × zero-shot / few-shot / CoT) on financial sentiment classification.
-          Key finding: 5 of 9 LLM configs beat FinBERT with zero fine-tuning — prompt design beats scale.
+          Key finding: 5 of 9 LLM configs beat FinBERT with zero fine-tuning, showing prompt design beats scale.
         </p>
         <div class="project-metrics">
           <div class="metric">
@@ -1235,7 +1310,7 @@
           <span class="tag">NLP</span>
           <span class="tag">Prompt Engineering</span>
         </div>
-        <a href="https://github.com/vubeoangel/Financial_LLM_research" target="_blank" class="project-link">
+        <a href="https://github.com/vubeoangel/Financial_LLM_research" target="_blank" rel="noopener" class="project-link">
           View on GitHub →
         </a>
       </div>
@@ -1245,10 +1320,10 @@
     <div class="project-card">
       <div class="project-card-inner">
         <div class="project-type">Collaboration · AI Systems</div>
-        <h3 class="project-title">Trustworthy RAG — AU</h3>
+        <h3 class="project-title">Trustworthy RAG - AU</h3>
         <p class="project-desc">
           A calibrated 3-state RAG system (<strong>confident / hedged / refused</strong>) over Australian
-          financial regulatory documents — hybrid retrieval (BM25 + dense + RRF), heuristic confidence
+          financial regulatory documents: hybrid retrieval (BM25 + dense + RRF), heuristic confidence
           routing, an NLI-based faithfulness check, and structured JSON output with citations.
         </p>
         <div class="project-metrics">
@@ -1273,64 +1348,37 @@
       </div>
     </div>
 
-    <!-- Portfolio Management -->
+    <!-- Medallion Architecture Pipeline -->
     <div class="project-card">
       <div class="project-card-inner">
-        <div class="project-type">Quant · Finance</div>
-        <h3 class="project-title">Applied Portfolio Manager</h3>
+        <div class="project-type">Data Engineering · Lakehouse</div>
+        <h3 class="project-title">Medallion Architecture Data Pipeline</h3>
         <p class="project-desc">
-          A quantitative toolkit covering vectorized backtesting, cross-sectional momentum
-          strategies, long/short portfolio construction, Information Coefficient analysis,
-          and ML-based alpha signal generation.
+          An end-to-end lakehouse on <strong>Azure Databricks</strong> implementing the full
+          Medallion Architecture: an ADF dynamic pipeline ingesting 9 tables into a <strong>Bronze</strong>
+          Delta layer, <strong>dbt Snapshots</strong> tracking SCD Type 2 history across the <strong>Silver</strong>
+          layer, and dbt models building a Star Schema <strong>Gold</strong> layer, secured with Unity Catalog
+          and Key Vault.
         </p>
         <div class="project-metrics">
           <div class="metric">
-            <span class="metric-val">Backtest</span>
-            <span class="metric-label">Vectorized engine</span>
+            <span class="metric-val">9 tables</span>
+            <span class="metric-label">Bronze to Gold</span>
           </div>
           <div class="metric">
-            <span class="metric-val">Alpha</span>
-            <span class="metric-label">IC + ML signals</span>
+            <span class="metric-val">8/8 pass</span>
+            <span class="metric-label">Data quality tests</span>
           </div>
         </div>
         <div class="project-tags">
-          <span class="tag">Python</span>
-          <span class="tag">pandas</span>
-          <span class="tag">NumPy</span>
-          <span class="tag">scikit-learn</span>
+          <span class="tag">Azure Databricks</span>
+          <span class="tag">dbt</span>
+          <span class="tag">Delta Lake</span>
+          <span class="tag">Unity Catalog</span>
+          <span class="tag">ADF</span>
+          <span class="tag">SCD Type 2</span>
         </div>
-        <a href="https://github.com/vubeoangel/applied-portfolio-manager" target="_blank" rel="noopener" class="project-link">
-          View on GitHub →
-        </a>
-      </div>
-    </div>
-
-    <!-- Uni App -->
-    <div class="project-card">
-      <div class="project-card-inner">
-        <div class="project-type">Application · Full-Stack</div>
-        <h3 class="project-title">Uni App</h3>
-        <p class="project-desc">
-          A university project application built end-to-end — from data and logic
-          through to an interactive interface, bringing analytical work into a
-          usable, hands-on tool.
-        </p>
-        <div class="project-metrics">
-          <div class="metric">
-            <span class="metric-val">Interactive</span>
-            <span class="metric-label">Interface</span>
-          </div>
-          <div class="metric">
-            <span class="metric-val">End-to-end</span>
-            <span class="metric-label">Build</span>
-          </div>
-        </div>
-        <div class="project-tags">
-          <span class="tag">Python</span>
-          <span class="tag">App</span>
-          <span class="tag">University</span>
-        </div>
-        <a href="https://github.com/vubeoangel/UniversityApp_UTS" target="_blank" rel="noopener" class="project-link">
+        <a href="https://github.com/vubeoangel/medallion-dbt" target="_blank" rel="noopener" class="project-link">
           View on GitHub →
         </a>
       </div>
@@ -1342,9 +1390,9 @@
         <div class="project-type">Data Analytics · BI</div>
         <h3 class="project-title">Bank Loan Analysis</h3>
         <p class="project-desc">
-          An interactive Power BI dashboard analysing a bank's loan portfolio —
-          tracking applications, funded amounts, and repayments, and surfacing
-          good vs. bad loans across regions, terms, and borrower profiles.
+          An interactive Power BI dashboard analysing a bank's loan portfolio: tracking
+          applications, funded amounts, and repayments, and surfacing good vs. bad loans
+          across regions, terms, and borrower profiles.
         </p>
         <div class="project-metrics">
           <div class="metric">
@@ -1374,10 +1422,10 @@
         <div class="project-type">Data Engineering · Cloud</div>
         <h3 class="project-title">NYC Payroll Data Pipeline</h3>
         <p class="project-desc">
-          An end-to-end cloud data engineering pipeline on <strong>Microsoft Azure</strong> —
-          ingesting 5 raw CSV sources into a Data Lake, orchestrating ETL through Data Factory
-          data flows, warehousing in Azure SQL, and querying aggregated results in Synapse
-          via external (CETAS) tables.
+          An end-to-end cloud data engineering pipeline on <strong>Microsoft Azure</strong>: ingesting
+          5 raw CSV sources into a Data Lake, orchestrating ETL through Data Factory data flows,
+          warehousing in Azure SQL, and querying aggregated results in Synapse via external
+          (CETAS) tables.
         </p>
         <div class="project-metrics">
           <div class="metric">
@@ -1403,37 +1451,35 @@
       </div>
     </div>
 
-    <!-- Medallion Architecture Pipeline -->
+    <!-- Australian International Trade -->
     <div class="project-card">
       <div class="project-card-inner">
-        <div class="project-type">Data Engineering · Lakehouse</div>
-        <h3 class="project-title">Medallion Architecture Data Pipeline</h3>
+        <div class="project-type">Data Analytics · Public Policy</div>
+        <h3 class="project-title">Australian International Trade - Visual Analytics (1988-2024)</h3>
         <p class="project-desc">
-          An end-to-end lakehouse on <strong>Azure Databricks</strong> implementing the full
-          Medallion Architecture — an ADF dynamic pipeline ingesting 9 tables into a <strong>Bronze</strong>
-          Delta layer, <strong>dbt Snapshots</strong> tracking SCD Type 2 history across the <strong>Silver</strong>
-          layer, and dbt models building a Star Schema <strong>Gold</strong> layer, secured with Unity Catalog
-          and Key Vault.
+          End-to-end visual analytics study of Australia's international trade across 10 SITC
+          categories and 67 subcategories (1988-2024). Engineered a 3-layer Excel model (raw,
+          statistics, analytics); built a Tableau interactive dashboard and narrative storyboard
+          for a public policy audience. Applied ETS (Exponential Smoothing) forecasting and
+          benchmarked AI-assisted trend interpretation (GPT-5) against self-derived findings.
         </p>
         <div class="project-metrics">
           <div class="metric">
-            <span class="metric-val">9 tables</span>
-            <span class="metric-label">Bronze → Gold</span>
+            <span class="metric-val">36 yrs</span>
+            <span class="metric-label">1988-2024 coverage</span>
           </div>
           <div class="metric">
-            <span class="metric-val">8/8 pass</span>
-            <span class="metric-label">Data quality tests</span>
+            <span class="metric-val">10 / 67</span>
+            <span class="metric-label">Categories / subcategories</span>
           </div>
         </div>
         <div class="project-tags">
-          <span class="tag">Azure Databricks</span>
-          <span class="tag">dbt</span>
-          <span class="tag">Delta Lake</span>
-          <span class="tag">Unity Catalog</span>
-          <span class="tag">ADF</span>
-          <span class="tag">SCD Type 2</span>
+          <span class="tag">Tableau</span>
+          <span class="tag">Excel</span>
+          <span class="tag">ABS Data</span>
+          <span class="tag">ETS Forecasting</span>
         </div>
-        <a href="https://github.com/vubeoangel/medallion-dbt" target="_blank" rel="noopener" class="project-link">
+        <a href="https://github.com/vubeoangel/Australian-International-Trades" target="_blank" rel="noopener" class="project-link">
           View on GitHub →
         </a>
       </div>
@@ -1453,24 +1499,28 @@
 
   <div class="edu-timeline reveal">
     <div class="edu-item">
-      <div class="edu-year">2024 — Expected Dec 2026</div>
-      <div class="edu-degree">Master of Information Technology — Data Analytics</div>
+      <div class="edu-year">Feb 2025 – Oct 2026</div>
+      <div class="edu-degree">Master of Information Technology - Data Analytics</div>
       <div class="edu-school">University of Technology Sydney (UTS) · Sydney, Australia</div>
       <div class="edu-note">
-        GPA 6.75 / 7.0 (High Distinction) · Excellence Academic Scholarship.
-        Coursework in Machine Learning, Data Mining, Statistical Analysis, and Database Systems —
-        building the technical foundation for data science and quantitative work.
+        WAM 87.45 (High Distinction), GPA 6.58 / 7.0 · Excellence Academic Scholarship.
+        Key results: NLP Algorithms (96 HD), Research Project (95 HD), Fundamentals of Data
+        Analytics (94 HD), Project Management (93 HD), Data Visualisation (91 HD).
       </div>
+      <div class="edu-badge">★ UTS Dean's List 2026, Faculty of Engineering and IT</div>
+      <div class="edu-cert-embed">
+        <iframe src="assets/certificates/deans-list-2026-certificate.pdf" title="UTS Dean's List 2026 Certificate"></iframe>
+      </div>
+      <a class="edu-cert-download" href="assets/certificates/deans-list-2026-certificate.pdf" target="_blank" rel="noopener">Download PDF ↓</a>
     </div>
 
     <div class="edu-item">
-      <div class="edu-year">Graduated 2024</div>
-      <div class="edu-degree">Bachelor of Business — Finance &amp; Economics</div>
+      <div class="edu-year">Feb 2022 – Oct 2024</div>
+      <div class="edu-degree">Bachelor of Business - Extended Finance, Sub-Major in Economics</div>
       <div class="edu-school">University of Technology Sydney (UTS) · Sydney, Australia</div>
       <div class="edu-note">
-        Excellence Academic Scholarship. Grounding in finance and economics — markets,
-        valuation, risk, and economic analysis — the domain lens I bring to every data
-        and modelling problem.
+        Excellence Academic Scholarship. Key results: Applied Financial Decision Making Capstone
+        (93 HD), Investment Analysis (90 HD), Applied Portfolio Management (81 D).
       </div>
     </div>
   </div>
@@ -1485,7 +1535,7 @@
     <div class="reveal">
       <p class="contact-text">
         I'm currently open to <strong>data science</strong>, <strong>ML engineering</strong>,
-        and <strong>research roles</strong> — particularly in FinTech, risk analytics, and applied AI.
+        and <strong>research roles</strong>, particularly in FinTech, risk analytics, and applied AI.
         Whether it's a full-time position, a collaboration, or just a conversation about
         cost-sensitive learning, I'd love to hear from you.
       </p>
@@ -1493,7 +1543,7 @@
       <div class="contact-links">
         <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=vulime@gmail.com" target="_blank" rel="noopener" class="contact-link">
           <span class="contact-link-icon">✉</span>
-          <span class="contact-link-text"><span class="__cf_email__" data-cfemail="255350494c4840654248444c490b464a48">[email&#160;protected]</span></span>
+          <span class="contact-link-text">vulime@gmail.com</span>
           <span class="contact-link-label">Email</span>
         </a>
         <a href="https://github.com/vubeoangel" target="_blank" class="contact-link">
@@ -1524,10 +1574,10 @@
 <!-- Footer -->
 <footer>
   <div class="footer-text">© 2026 <span>Sebastian Nguyen</span>. Built with precision.</div>
-  <div class="footer-text">MSc IT Data Analytics · <span>Bachelor of Business (Finance &amp; Economics)</span></div>
+  <div class="footer-text">MSc IT Data Analytics · <span>Bachelor of Business (Extended Finance, Economics)</span></div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
